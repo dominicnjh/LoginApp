@@ -5,4 +5,9 @@ router.get('/', (req, res) => {
     res.render('signup');
 });
 
+router.post('/', (req,res) => {
+    res.render('signupSuccess');
+    res.redirect('/login');
+});
+
 module.exports = router;
