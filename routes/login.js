@@ -8,6 +8,9 @@ const router = express.Router();
 passport.use(new LocalStrategy({
     passReqToCallback: true
 }, function (req, username, password, done) {
+    if (!username || !password) {
+        return done(null, false)
+    }
     User.findOne({ username: username }, function (err, user) {
         if (err) { return done(err); }
         if (!user) {
@@ -39,12 +42,10 @@ router.get('/', (req, res) => {
     res.render('login');
 });
 
-router.post('/',
-    passport.authenticate('local', {
-        successRedirect: '/',
-        failureRedirect: '/login',
-        failureFlash: true
-    })
-);
+router.post('/', passport.authenticate('local', {
+    successRedirect: '/',
+    failureRedirect: '/login',
+    failureFlash: true
+}));
 
 module.exports = router;
