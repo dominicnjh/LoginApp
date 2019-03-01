@@ -1,6 +1,8 @@
 # Login App
 This a login app with registration, authentication and authorisation capabilities. It can be used to organise and sort data based on user's account registered on this portal.
 
+<br>
+
 ## What I've Learned
 1. Use express and route handling of HTTP requests.
 2. Using EJS view engine to render pages.
