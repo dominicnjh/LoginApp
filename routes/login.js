@@ -8,9 +8,6 @@ const router = express.Router();
 passport.use(new LocalStrategy({
     passReqToCallback: true
 }, function (req, username, password, done) {
-    if (!username || !password) {
-        return done(null, false)
-    }
     User.findOne({ username: username }, function (err, user) {
         if (err) { return done(err); }
         if (!user) {
