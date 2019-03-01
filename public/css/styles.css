@@ -1,0 +1,9 @@
+body {
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+/* Nav Bar */
+.nav-item {
+    margin: 0 10px;
+}
