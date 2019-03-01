@@ -3,12 +3,17 @@ body {
     font-family: 'Montserrat', sans-serif;
 }
 
+.alert {
+    margin: 10px auto;
+    width: 50%;
+}
+
 .btn {
     margin: 10px 0;
 }
 
 .container-fluid {
-    padding: 5%;
+    padding: 20px;
     width: 70%;
 }
 
