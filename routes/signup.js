@@ -12,7 +12,7 @@ router.get('/', (req, res) => {
 router.post('/', async (req, res) => {
     const { error } = validate(req.body);
     if (error) {
-        req.flash('error_msg', 'Missing input(s).');
+        req.flash('error_msg', 'Missing detail(s).');
         return res.status(400).redirect('/signup');
     }
 

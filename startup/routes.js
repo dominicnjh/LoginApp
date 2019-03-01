@@ -9,16 +9,18 @@ const session = require('express-session');
 const home = require('../routes/index');
 const signup = require('../routes/signup');
 const login = require('../routes/login');
+const logout = require('../routes/logout');
 
 module.exports = function (app) {
     // Setting up view engine
     app.set('view engine', 'ejs');
+    app.set('views', __dirname + '/../views');
     app.use(express.static('public'));
 
     // Setting up Passport
     app.use(cookieParser());
     app.use(bodyParser.urlencoded({ extended: true }));
-    app.use(session({ secret: 'mySecret', resave: false, saveUninitialized: true}));
+    app.use(session({ secret: 'mySecret', resave: true, saveUninitialized: true}));
     app.use(passport.initialize());
     app.use(passport.session());
 
@@ -35,4 +37,5 @@ module.exports = function (app) {
     app.use('/', home);
     app.use('/signup', signup);
     app.use('/login', login);
+    app.use('/logout', logout);
 }
