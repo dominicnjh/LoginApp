@@ -1,7 +1,7 @@
-# Login App
-This a login app with registration, authentication and authorisation capabilities. It can be used to organise and sort data based on user's account registered on this portal.
+# Domnjh Portal
+This a portal that contains different web applications. Currently, it only has a login app with registration, authentication and authorisation capabilities. It can be used to organise and sort data based on user's account registered on this portal in the future.
 
-It can be found <a href="https://glacial-caverns-31383.herokuapp.com/login" target="_blank">here</a>.
+It can be found <a href="http://domnjh-portal.herokuapp.com/login" target="_blank">here</a>.
 
 <br>
 
